@@ -1,0 +1,55 @@
+:root {
+    --main-blue: rgb(100, 100, 240);
+    --tinted-white: rgb(241, 222, 179);
+    --main-red: rgb(204, 66, 66);
+}
+
+body > * {
+    border:solid;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    height: 100vh;
+}
+
+#side-container {
+    grid-row: 1 / 3;
+}
+
+#top-container {
+    grid-column: 2 / 4;
+    display: grid;
+    box-sizing: border-box;
+    padding: 40px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+#top-container > * {
+    display: flex;
+    gap: 10px;
+}
+
+#profile { 
+    align-self: center;
+    justify-self: end;
+}
+
+.buttons-container > button {
+    width: 33%;
+}
+
+#project-container {
+    width: inherit;
+    height: inherit;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    align-content: center;
+    justify-content: stretch;
+    border:solid;
+}
+
